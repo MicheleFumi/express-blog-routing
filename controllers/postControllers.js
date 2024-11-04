@@ -5,7 +5,10 @@ function index(req, res) {
         data : post,
         count : post.length
     })
+
+    
 }
+
 
 
 const show = (req,res)=>{
@@ -26,5 +29,6 @@ const show = (req,res)=>{
 
 module.exports = {
     index,
-    show
+    show,
+    
 }
