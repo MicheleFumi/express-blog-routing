@@ -10,8 +10,10 @@ function index(req, res) {
 
 const show = (req,res)=>{
     const posts = post.forEach(post => post.slug)
-    //const pizza = menu.find(pizza => pizza.id == request.params.id)
+  
     console.log(posts);
+    console.log(post);
+    
     return res.status(200).json({
      
         data:post.slug
