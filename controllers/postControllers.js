@@ -7,6 +7,18 @@ function index(req, res) {
     })
 }
 
+
+const show = (req,res)=>{
+    const posts = post.forEach(post => post.slug)
+    //const pizza = menu.find(pizza => pizza.id == request.params.id)
+    console.log(posts);
+    return res.status(200).json({
+     
+        data:post.slug
+    })
+}
+
 module.exports = {
-    index
+    index,
+    show
 }
