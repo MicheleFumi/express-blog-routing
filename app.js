@@ -14,8 +14,8 @@ app.listen(3000,(req, res)=>{
 })
 
 app.use("/post",postRouter)
-app.get("/post",postRouter)
 
-app.get("/:slug",postRouter)
+
+
 
 
