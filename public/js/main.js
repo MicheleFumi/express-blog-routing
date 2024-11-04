@@ -1,10 +1,11 @@
-//PUBLIC JS
 let listEl= document.querySelector('ul')
 
 axios.get("http://127.0.0.1:3000/post")
 .then(res=>{
     const posts = res.data.data
-    //console.log(posts);
+  console.log(posts);
+  
+  
     listElement= ''
     posts.forEach(post => {
         let {title, content, img, tags} = post
@@ -19,3 +20,4 @@ axios.get("http://127.0.0.1:3000/post")
     });
     listEl.innerHTML= listElement
 })
+
