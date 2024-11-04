@@ -9,14 +9,18 @@ function index(req, res) {
 
 
 const show = (req,res)=>{
-    const posts = post.forEach(post => post.slug)
-  
-    console.log(posts);
-    console.log(post);
-    
+    const slug = req.params.slug
+    const posts = post.find(post => post.slug === slug)
+
+    console.log(slug);
+    if (!post) {
+        return res.status(404).json({
+            error:`404! Pizza Not Found!`
+        })
+    }
     return res.status(200).json({
      
-        data:post.slug
+        data:posts
     })
 }
 
